@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB150724154959" Class="eticaretDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=mssql14.natro.com;Initial Catalog=DB150724154959;User ID=USR150724154959" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="mssql14.natro.comConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ETICARET_Ayarlar" Member="ETICARET_Ayarlars">
+    <Type Name="ETICARET_Ayarlar">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirmaAdi" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="WebAdresi" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="YetkiliKisi" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Telefon2" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Adres" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="VergiNo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="VergiDairesi" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="SunucuEmail" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="EmailSifre" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ETICARET_Yorumlar" Member="ETICARET_Yorumlars">
+    <Type Name="ETICARET_Yorumlar">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UyeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Yorum" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EklenmeTarihi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UrunID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Onay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ETICARET_BankaHesap" Member="ETICARET_BankaHesaps">
+    <Type Name="ETICARET_BankaHesap">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Banka" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="SubeAdi" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="SubeKodu" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="HesapTuru" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="HesapNo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="IBAN" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ETICARET_Banner" Member="ETICARET_Banners">
+    <Type Name="ETICARET_Banner">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Banner" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sira" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ETICARET_EBulten" Member="ETICARET_EBultens">
+    <Type Name="ETICARET_EBulten">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EklenmeTarihi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ETICARET_Giris" Member="ETICARET_Giris">
+    <Type Name="ETICARET_Giri">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KullaniciAdi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sifre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ETICARET_HavaleBildirim" Member="ETICARET_HavaleBildirims">
+    <Type Name="ETICARET_HavaleBildirim">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Tutar" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Notunuz" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SiparisID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EklenmeTarihi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ETICARET_Kargo" Member="ETICARET_Kargos">
+    <Type Name="ETICARET_Kargo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KargoAdi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Fiyat" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ETICARET_Kategori" Member="ETICARET_Kategoris">
+    <Type Name="ETICARET_Kategori">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KategoriAdi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Sira" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Detay" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Ust" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Alt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Keywords" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Durum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AltID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Resim" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ResimVitrin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ETICARET_Markalar" Member="ETICARET_Markalars">
+    <Type Name="ETICARET_Markalar">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MarkaAdi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Resim" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sira" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ETICARET_Sayfalar" Member="ETICARET_Sayfalars">
+    <Type Name="ETICARET_Sayfalar">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Baslik" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Detay" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sira" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Durum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Keywords" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Ust" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Alt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ETICARET_Seo" Member="ETICARET_Seos">
+    <Type Name="ETICARET_Seo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Keywords" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ETICARET_Sepet" Member="ETICARET_Sepets">
+    <Type Name="ETICARET_Sepet">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UyeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UrunID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EklenmeTarihi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Adet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ETICARET_SepetSiparis" Member="ETICARET_SepetSiparis">
+    <Type Name="ETICARET_SepetSipari">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UyeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IP" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UrunID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EklenmeTarihi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Adet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ETICARET_Siparis" Member="ETICARET_Siparis">
+    <Type Name="ETICARET_Sipari">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AdSoyad" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Sehir" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ilce" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Adres" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="PostaKodu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Tip" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FaturaIsim" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TC" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UyeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IP" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EklenmeTarihi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Onay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Durum" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Kargo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tutar" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="OdemeSekli" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BankaHesap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ETICARET_Urunler" Member="ETICARET_Urunlers">
+    <Type Name="ETICARET_Urunler">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UrunAdi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="KatID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sira" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MarkaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StokKodu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Kdv" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KargoAgirlik" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Resim" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Stok" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AlisFiyat" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="IndirimliFiyat" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Detay" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OdemeSecenekleri" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Keywords" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Durum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Yeni" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Firsat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Vitrin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ETICARET_UrunResimleri" Member="ETICARET_UrunResimleris">
+    <Type Name="ETICARET_UrunResimleri">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Resim" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UrunID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ETICARET_Uyeler" Member="ETICARET_Uyelers">
+    <Type Name="ETICARET_Uyeler">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ad" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Soyad" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sifre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Adres" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EklenmeTarihi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Onay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cinsiyet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Kampanya" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sehir" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ilce" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PostaKodu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
